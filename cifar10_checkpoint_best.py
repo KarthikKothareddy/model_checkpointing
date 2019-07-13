@@ -1,9 +1,10 @@
 # USAGE
 # python cifar10_checkpoint_best.py --weights weights/best/cifar10_best_weights.hdf5
-
+import sys
+sys.path.append("..")
 # import the necessary packages
 from sklearn.preprocessing import LabelBinarizer
-from pyimagesearch.nn.conv import MiniVGGNet
+from model_checkpointing.minivggnet import MiniVGGNet
 from keras.callbacks import ModelCheckpoint
 from keras.optimizers import SGD
 from keras.datasets import cifar10
